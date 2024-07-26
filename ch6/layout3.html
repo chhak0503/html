@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout2</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '돋움';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+
+        #container {
+            width: 800px;
+            height: auto;
+            padding: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            background: #eee;
+        }
+
+        /* 메인 */
+        main {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            background: #eee;
+            margin: 10px 0;
+        }
+
+        main > section {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            background: #ddd;
+            margin-top: 10px;
+        }
+
+        main > section > article {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            background: #ccc;
+            margin-top: 10px;
+        }
+
+        /* 푸터 */
+        footer {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px dashed black;
+            box-sizing: border-box;
+            background: #eee;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>header</header>
+        <main>
+          main
+          <section>
+            section #1
+            <article>article #1</article>
+            <article>article #2</article>
+          </section>
+          <section>
+            section #2
+            <article>article #1</article>
+            <article>article #2</article>
+          </section>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
