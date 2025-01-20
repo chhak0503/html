@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <TITLE>3.테이블태그</TITLE>
+        <!--
+            날짜 : 2025/01/20
+            이름 : 김철학
+            내용 : 2장 HTML 테이블태그
+        -->
+    </head>
+    <BODY>
+        <H3>3.테이블태그</H3>
+
+        <h4>User 목록</h4>
+        <table border="1">
+            <caption>User 목록</caption>
+            <tr><!-- table row -->
+                <th>아이디</th><!-- table header -->
+                <th>이름</th>
+                <th>휴대폰</th>
+                <th>나이</th>
+            </tr>
+            <tr>
+                <td>a101</td><!-- table data -->
+                <td>김유신</td>
+                <td>010-1234-1001</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>a102</td>
+                <td>김춘추</td>
+                <td>010-1234-1002</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>a103</td>
+                <td>장보고</td>
+                <td>010-1234-1003</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>a104</td>
+                <td>강감찬</td>
+                <td>010-1234-1004</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>a105</td>
+                <td>이순신</td>
+                <td>010-1234-1005</td>
+                <td>55</td>
+            </tr>
+        </table>
+
+        <h4>테이블 셀병합</h4>
+        <table border="1">
+            <tr>
+                <td colspan="2">1x1</td>
+                <td rowspan="2">1x3</td>
+                <td rowspan="3">1x4</td>
+                <td>1x5</td>
+            </tr>
+            <tr>
+                <td>2x1</td>
+                <td>2x2</td>
+                <td>2x5</td>
+            </tr>
+            <tr>
+                <td colspan="3">3x1</td>
+                <td>3x5</td>
+            </tr>
+            <tr>
+                <td>4x1</td>
+                <td>4x2</td>
+                <td>4x3</td>
+                <td>4x4</td>
+                <td>4x5</td>
+            </tr>
+
+        </table>
+
+
+    </BODY>
+</html>
