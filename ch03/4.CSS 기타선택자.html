@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>4.CSS 기타선택자</title>
+        <!--
+            날짜 : 2025/01/21
+            이름 : 김철학
+            내용 : CSS 기타선택자 실습하기
+        -->
+        <style>
+            /* 속성 선택자 */
+            input[type=text] {
+                background-color: yellow;
+            }
+            input[name=pass] {
+                color: red;
+            }
+            input[value] {
+                background-color: green;
+            }
+
+            /* 반응 선택자 */
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+
+            .box1:active {
+                background-color: red;
+            }
+
+            .box2:hover {
+                background-color: green;
+            }
+
+            input[type=checkbox]:checked + span {
+                background-color: orange;
+            }
+
+            /* 가상 요소 선택자 */
+            ul.won > li::after {
+                content: '원';
+            }
+
+            ul.dollar > li::before {
+                content: '$';
+            }
+        </style>
+    </head>
+    <body>
+        <h3>4.CSS 기타선택자</h3>
+
+        <h4>속성 선택자</h4>
+        <form action="#">
+            <input type="text" name="uid"><br>
+            <input type="password" name="pass"><br>
+            <input type="submit" value="로그인">
+        </form>        
+
+        <h4>반응 선택자</h4>
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <label>
+            <input type="checkbox" name="check"><span>체크박스</span>
+        </label>
+
+        <h4>가상 요소 선택자</h4>
+        <ul class="won">
+            <li>1,000</li>
+            <li>2,000</li>
+            <li>3,000</li>
+        </ul>
+
+        <ul class="dollar">
+            <li>1,000</li>
+            <li>2,000</li>
+            <li>3,000</li>
+        </ul>
+
+    </body>
+</html>
