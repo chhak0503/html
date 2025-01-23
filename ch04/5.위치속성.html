@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>5.위치속성</title>
+        <!--
+            날짜 : 2025/01/23
+            이름 : 김철학
+            내용 : CSS 위치속성 실습하기        
+        -->
+        <style>
+            section {
+                width: 400px;
+                height: 300px;
+                border: 1px solid black;
+            }
+            section > div {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            section > div:nth-child(1) {background: red;}
+            section > div:nth-child(2) {background: green;}
+            section > div:nth-child(3) {background: blue;}
+
+            /* 
+                position: static 
+                 - 상대 좌표 포지션
+                 - 모든 태그의 기본 포지션 값
+                 - 이동속성(left, right, top, bottom) 적용 안됨
+            */
+            .box1 > div:nth-child(1) {
+                position: static;
+                left: 100px;
+                top: 60px;
+            }
+
+            /* 
+                position: relative 
+                 - 상대 좌표 포지션
+                 - 이동속성(left, right, top, bottom) 적용 됨
+            */
+            .box2 > div:nth-child(1) {
+                position: relative;
+                left: 10px;
+                top: 10px;
+            }
+            .box2 > div:nth-child(2) {
+                position: relative;
+                right: 10px;
+                bottom: 10px;
+            }
+            .box2 > div:nth-child(3) {
+                position: relative;
+                left: 100px;
+                bottom: 30px;
+            }
+
+            /* 
+                position: absolute 
+                 - 절대위치 좌표 포지션
+                 - 이동속성(left, right, top, bottom)으로 배치
+                 - 부모태그요소에 position: relative 관계설정
+            */
+            .box3 {
+                position: relative;
+            }
+            .box3 > div:nth-child(1) {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .box3 > div:nth-child(2) {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+
+            }
+            .box3 > div:nth-child(3) {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+            /* 
+                position: fixed
+                 - 절대위치 좌표 포지션
+                 - 브라우저 영역에 고정 배치
+            */
+            .box4 {
+                position: relative;
+            }
+            .box4 > div:nth-child(1) {
+                position: fixed;
+                right: 10px;
+                top: 10px;
+            }
+            .box4 > div:nth-child(2) {
+                position: fixed;
+                right: 20px;
+                top: 20px;
+            }
+            .box4 > div:nth-child(3) {
+                position: fixed;
+                right: 30px;
+                top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>5.위치속성</h3>
+
+        <h4>position:static</h4>
+        <section class="box1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <h4>position:relative</h4>
+        <section class="box2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <h4>position:absolute</h4>
+        <section class="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>        
+
+        <h4>position:fixed</h4>
+        <section class="box4">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </body>
+</html>
