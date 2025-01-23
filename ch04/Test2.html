@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 양쪽 화살표</title>
+    <style>
+        .arrow-box {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* 왼쪽 화살표 */
+        .arrow-box::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px; /* 화살표 위치 조정 */
+            transform: translateY(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #010e16 transparent transparent;
+        }
+
+        /* 오른쪽 화살표 */
+        .arrow-box::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -10px; /* 화살표 위치 조정 */
+            transform: translateY(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="arrow-box">양쪽 화살표</div>
+</body>
+</html>
