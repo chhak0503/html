@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>부동산113</title>
+    <!--
+        날짜 : 2025/02/03
+        이름 : 김철학
+        내용 : UI디자인 실습하기
+    -->
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+
+        #container {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 80px;
+            background: url('./images/header_bg.gif');
+        }
+
+        header > div {
+            position: relative;
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        header .logo {
+            margin-top: 6px;
+        }
+
+        header .gnb {
+            float: right;
+            width: 620px;
+            height: 32px;
+            margin-top: 14px;
+            overflow: hidden;
+        }
+        header .gnb > li {
+            float: left;
+            width: 20%;
+            height: 100%;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        header .gnb > li > a {
+            text-align: right;
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 32px;
+        }
+        header .gnb > li > a:hover {
+            color: #8f1b13;
+        }
+
+        header .latest {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+        }
+        header .latest > a {
+            display: inline-block;
+        }
+        header .latest > a:nth-child(1) {
+            position: relative;
+            top: 2px;
+        }
+        header .latest > a:nth-child(2) {
+            position: relative;
+            top: -5px;
+        }
+        header .latest > a:nth-child(2)::before {
+            content: url('./images/ico_latest.gif');
+        }
+        
+        /* 메인 */
+        main {
+            width: 1000px;
+            height: auto;            
+            margin: 0px auto;
+        }
+
+        main > div {
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        main > div > div {}
+        main > div > .banner {
+            float: left;
+            width: 588px;
+            height: 320px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > div > .call {
+            float: right;
+            width: 406px;
+            height: 133px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > div > .qna {
+            float: right;
+            width: 406px;
+            height: 182px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        main > section {
+            width: 100%;
+            height: auto;            
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        main > section > aside {
+            float: left;
+            width: 195px;
+            height: 760px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > section > article {
+            float: right;
+            width: 800px;
+            height: 250px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+
+        /* 푸터 */
+        footer {
+            width: 1000px;
+            height: 130px;
+            border: 1px solid #d7d7d7;
+            border-top: 2px solid #777777;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        footer > p {
+            font-size: 11.5px;
+            color: #585858;
+            line-height: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div>
+                <a href="#">
+                    <img src="./images/header_logo.jpg" alt="로고" class="logo">
+                </a>
+
+                <ul class="gnb">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">매물정보</a></li>
+                    <li><a href="#">매도의뢰</a></li>
+                    <li><a href="#">매입의뢰</a></li>
+                    <li><a href="#">질문답변</a></li>
+                </ul>
+
+                <div class="latest">
+                    <a href="#">
+                        <img src="./images/header_txt_latest.gif" alt="최신매물정보">
+                    </a>
+                    <a href="#">[아파트] 삼성동 전세 (방:3/욕실2) / 157㎡ / 매매가 21,100</a>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="banner"></div>
+                <div class="call"></div>
+                <div class="qna"></div>
+            </div>
+            <section>
+                <aside></aside>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+        </main>
+        <footer>
+            <img src="./images/footer_logo.jpg" alt="푸터 로고">
+            <p>
+                (주)컴퍼니 / 사업자등록번호 123-45-67890 /   통신판매업신고 제 2013-컴퍼니구-123호 / 등록번호 컴퍼니01234 (2013.04.01) / 발행인 : 홍길동<br>
+                대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 부산시 금정구 따듯한동 123-1
+                <span>Copyright(C)컴퍼니 All rights reserved.</span>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
